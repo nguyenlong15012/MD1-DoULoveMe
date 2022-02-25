@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("lm.jpg");
+            text-align-all:center;
+        }
+        button{
+            background: red;
+        }
+        h1{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button onclick="submit()">YES</button>
+<button id="btnNo" onmouseover="noHover()">NO</button>
+<h1 id="ts"></h1>
+<script>
+    function submit(){
+        // document.getElementById('ts').innerHTML = '<3 ♥♥♥♥♥';
+        alert('love u too <3 ♥♥♥♥')
+    }
+
+    let khong = document.getElementById('btnNo');
+    function init(){
+        khong = document.getElementById('btnNo');
+        khong.style.position = 'relative';
+        khong.style.left = 0 + 'px';
+        khong.style.top = 0 + 'px';
+    }
+
+    init();
+
+    function noHover(){
+        let x = Math.floor(Math.random() * window.innerWidth);
+        let y = Math.floor(Math.random() * window.innerHeight);
+
+        document.getElementById('btnNo').style.left = x +'px';
+        document.getElementById('btnNo').style.top = y +'px';
+    }
+</script>
+</body>
+</html>
